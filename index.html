@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김보미 | 혜전대학교 간호학과 포트폴리오</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FFF6E5',
+            ivoryLight: '#FFFDF9',
+            sage: '#84B59F',
+            sageDark: '#6A9C86',
+            coral: '#F96167',
+            teal: '#028090',
+            tealDark: '#016370',
+            ink: '#1E293B',
+            muted: '#475569'
+          },
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FFF6E5;
+      color: #1E293B;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .glass-nav {
+      background: rgba(255, 246, 229, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -10px rgba(2, 128, 144, 0.14);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-sage selection:text-white">
+
+  <!-- 상단 고정 내비게이션 -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-sage/25">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-bold text-lg text-teal tracking-tight">
+        <span class="w-2.5 h-2.5 rounded-full bg-coral inline-block"></span>
+        <span>BOMI.NURSE</span>
+      </a>
+
+      <!-- 데스크탑 메뉴 -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink">
+        <a href="#about" class="hover:text-teal transition-colors">자기소개</a>
+        <a href="#projects" class="hover:text-teal transition-colors">프로젝트 갤러리</a>
+        <a href="#contact" class="hover:text-teal transition-colors">연락처</a>
+      </nav>
+
+      <!-- 모바일 메뉴 버튼 -->
+      <button id="mobile-menu-btn" aria-label="메뉴 열기" class="md:hidden p-2 rounded-lg text-teal hover:bg-sage/15">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-ivoryLight border-b border-sage/25 px-6 py-4 space-y-3 text-sm font-medium">
+      <a href="#about" class="block py-1.5 text-ink hover:text-teal mobile-link">자기소개</a>
+      <a href="#projects" class="block py-1.5 text-ink hover:text-teal mobile-link">프로젝트 갤러리</a>
+      <a href="#contact" class="block py-1.5 text-ink hover:text-teal mobile-link">연락처</a>
+    </div>
+  </header>
+
+  <!-- 히어로 & 자기소개 섹션 -->
+  <main id="top" class="pt-28 pb-16">
+    <section id="about" class="max-w-5xl mx-auto px-6 py-10 md:py-16">
+      <div class="bg-ivoryLight rounded-3xl p-8 md:p-12 border border-sage/30 shadow-sm">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <!-- 프로필 아바타 영역 -->
+          <div class="shrink-0 relative">
+            <div class="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-sage/40 via-ivory to-teal/20 border-4 border-white shadow-md flex flex-col items-center justify-center text-teal">
+              <svg class="w-16 h-16 mb-1 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+              <span class="text-xs font-semibold tracking-wider uppercase text-tealDark">Nursing '26</span>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-coral text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+              1학년
+            </span>
+          </div>
+
+          <!-- 소개 텍스트 -->
+          <div class="flex-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sage/20 text-tealDark text-xs font-semibold mb-4">
+              <span>혜전대학교 간호보건계열 간호학과</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-ink leading-tight mb-4">
+              따뜻한 공감과 디지털 역량을 갖춘<br class="hidden sm:inline" />
+              예비 간호사 <span class="text-teal">김보미</span>입니다.
+            </h1>
+            <p class="text-muted text-base md:text-lg leading-relaxed mb-6">
+              생명을 지키는 정확한 간호 지식에 AI·웹 기술을 더해, 누구나 쉽고 친근하게 이해할 수 있는 건강 교육 콘텐츠를 만듭니다. 이번 학기 동안 직접 기획하고 제작한 디지털 결과물들을 소개합니다.
+            </p>
+
+            <!-- 핵심 역량 태그 -->
+            <div class="flex flex-wrap justify-center md:justify-start gap-2.5">
+              <span class="px-3.5 py-1.5 rounded-xl bg-ivory border border-sage/40 text-sm font-medium text-ink">#기초간호학 &amp; 응급처치</span>
+              <span class="px-3.5 py-1.5 rounded-xl bg-ivory border border-sage/40 text-sm font-medium text-ink">#AI 콘텐츠 제작</span>
+              <span class="px-3.5 py-1.5 rounded-xl bg-ivory border border-sage/40 text-sm font-medium text-ink">#보건교육 시각화</span>
+              <span class="px-3.5 py-1.5 rounded-xl bg-ivory border border-sage/40 text-sm font-medium text-ink">#웹 퍼블리싱</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 갤러리 섹션 -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-coral font-bold text-sm tracking-wider uppercase">Semester Portfolio</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-ink mt-1">프로젝트 갤러리</h2>
+        </div>
+        <p class="text-sm text-muted">각 프로젝트 카드를 클릭하면 제작 의도와 상세 내용을 확인할 수 있습니다.</p>
+      </div>
+
+      <!-- 3열 프로젝트 그리드 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+
+        <!-- 프로젝트 1: CPR 교육 숏폼 영상 -->
+        <article class="bg-ivoryLight rounded-2xl overflow-hidden border border-sage/30 shadow-sm card-hover flex flex-col">
+          <!-- 9:16 숏폼 비디오 직접 플레이어 -->
+          <div class="bg-slate-900 py-4 px-6 flex flex-col items-center justify-center relative">
+            <div class="w-44 aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border-2 border-white/20 bg-black relative">
+              <video
+                id="card-video-cpr"
+                src="./video_1.mp4"
+                controls
+                playsinline
+                preload="metadata"
+                class="w-full h-full object-cover"
+              ></video>
+            </div>
+            <span class="mt-2.5 text-[11px] text-white/80 font-medium">
+              ▶ 9:16 숏폼 영상 바로 재생 (00:10)
+            </span>
+          </div>
+
+          <div onclick="openModal('cpr')" class="p-6 flex-1 flex flex-col cursor-pointer">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-coral/15 text-coral">영상 · 숏폼</span>
+              <span class="text-xs text-muted">혜전대 간호학과 실습</span>
+            </div>
+            <h3 class="text-lg font-bold text-ink mb-2">CPR(심폐소생술) 교육 숏폼 영상</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4 flex-1">
+              "눈앞에서 누군가 쓰러진다면?" 119 신고 및 AED 요청부터 분당 100~120회·5cm 깊이 가슴압박까지 10초 안에 핵심을 전달하는 실습 교육 숏폼입니다.
+            </p>
+            <div class="pt-4 border-t border-sage/20 flex items-center justify-between text-xs font-semibold text-teal">
+              <span>장면 구성 &amp; 상세 보기</span>
+              <span>→</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 프로젝트 2: 웹 테트리스 게임 (Google AI Studio 앱 연동) -->
+        <article class="bg-ivoryLight rounded-2xl overflow-hidden border border-sage/30 shadow-sm card-hover flex flex-col">
+          <!-- 테트리스 프리뷰 & 바로 실행 배너 -->
+          <div class="h-56 bg-gradient-to-br from-teal to-tealDark p-5 flex flex-col items-center justify-center text-white relative">
+            <div class="grid grid-cols-4 gap-1.5 mb-3.5 p-2.5 bg-white/10 rounded-xl backdrop-blur-xs">
+              <div class="w-5 h-5 rounded-sm bg-coral"></div>
+              <div class="w-5 h-5 rounded-sm bg-coral"></div>
+              <div class="w-5 h-5 rounded-sm bg-transparent"></div>
+              <div class="w-5 h-5 rounded-sm bg-sage"></div>
+              <div class="w-5 h-5 rounded-sm bg-transparent"></div>
+              <div class="w-5 h-5 rounded-sm bg-coral"></div>
+              <div class="w-5 h-5 rounded-sm bg-ivory"></div>
+              <div class="w-5 h-5 rounded-sm bg-sage"></div>
+              <div class="w-5 h-5 rounded-sm bg-ivory"></div>
+              <div class="w-5 h-5 rounded-sm bg-ivory"></div>
+              <div class="w-5 h-5 rounded-sm bg-ivory"></div>
+              <div class="w-5 h-5 rounded-sm bg-sage"></div>
+            </div>
+            <a
+              href="https://ai.studio/apps/d56541cf-38ae-4366-80c2-596cbf728f9a"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-coral hover:bg-coral/90 text-white text-xs font-bold shadow-md transition-transform active:scale-95"
+            >
+              <span>테트리스 게임 플레이하기</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+
+          <div onclick="openModal('tetris')" class="p-6 flex-1 flex flex-col cursor-pointer">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-teal/15 text-teal">웹 앱 · AI Studio</span>
+              <span class="text-xs text-muted">인터랙티브 게임</span>
+            </div>
+            <h3 class="text-lg font-bold text-ink mb-2">간호학 힐링 테트리스 게임</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4 flex-1">
+              Google AI Studio를 활용해 직접 기획·구현한 브라우저 기반 클래식 테트리스 웹 애플리케이션입니다.
+            </p>
+            <div class="pt-4 border-t border-sage/20 flex items-center justify-between text-xs font-semibold text-teal">
+              <span>기획 의도 &amp; 상세 보기</span>
+              <span>→</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 프로젝트 3: 건강 캠페인 포스터 -->
+        <article onclick="openModal('poster')" class="cursor-pointer bg-ivoryLight rounded-2xl overflow-hidden border border-sage/30 shadow-sm card-hover flex flex-col">
+          <div class="h-56 bg-gradient-to-br from-sage/45 via-ivory to-coral/20 p-6 flex flex-col items-center justify-center text-ink relative">
+            <div class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-3 text-coral">
+              <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-semibold tracking-wide bg-white/80 text-tealDark px-3 py-1 rounded-full">감염 예방 · 카드뉴스 &amp; 포스터</span>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-sage/25 text-tealDark">이미지 · 디자인</span>
+              <span class="text-xs text-muted">건강동아리 캠페인</span>
+            </div>
+            <h3 class="text-lg font-bold text-ink mb-2">손씻기 &amp; 건강 캠페인 포스터</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4 flex-1">
+              올바른 손씻기 6단계와 임상실습 전 필수 수칙을 직관적인 인포그래픽으로 정리한 보건 교육 시각 자료입니다.
+            </p>
+            <div class="pt-4 border-t border-sage/20 flex items-center justify-between text-xs font-semibold text-teal">
+              <span>상세 내용 보기</span>
+              <span>→</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-12">
+      <div class="bg-teal rounded-3xl p-8 md:p-12 text-white shadow-md">
+        <div class="max-w-2xl">
+          <span class="text-ivory/80 text-sm font-semibold tracking-wider uppercase">Contact</span>
+          <h2 class="text-2xl md:text-3xl font-bold mt-1 mb-3">함께 소통하고 성장해요</h2>
+          <p class="text-ivory/90 text-sm md:text-base leading-relaxed mb-8">
+            보건 교육 콘텐츠 제작, 간호학 스터디, 또는 프로젝트에 대한 피드백이 있다면 언제든 편하게 연락해 주세요.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- 이메일 카드 -->
+            <a href="mailto:bomi.kim@hyejeon.ac.kr" class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 hover:bg-white/20 transition-colors border border-white/15">
+              <div class="w-11 h-11 rounded-xl bg-coral flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="overflow-hidden">
+                <div class="text-xs text-ivory/75">Email</div>
+                <div class="font-semibold text-sm truncate">bomi.kim@hyejeon.ac.kr</div>
+              </div>
+            </a>
+
+            <!-- SNS (Instagram / GitHub) 카드 -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 hover:bg-white/20 transition-colors border border-white/15">
+              <div class="w-11 h-11 rounded-xl bg-sage flex items-center justify-center shrink-0 text-tealDark">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke-width="2"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"></line>
+                </svg>
+              </div>
+              <div class="overflow-hidden">
+                <div class="text-xs text-ivory/75">Instagram / SNS</div>
+                <div class="font-semibold text-sm truncate">@bomi_nursing_log</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="border-t border-sage/25 py-8 text-center text-xs text-muted">
+    <p>© 2026 김보미 (Hyejeon College Department of Nursing). All rights reserved.</p>
+  </footer>
+
+  <!-- 프로젝트 상세 모달 -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4" onclick="closeModalOnBackdrop(event)">
+    <div class="bg-ivoryLight rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 border border-sage/40 shadow-2xl relative">
+      <button onclick="closeModal()" aria-label="모달 닫기" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-ivory hover:bg-sage/20 flex items-center justify-center text-ink">
+        ✕
+      </button>
+
+      <div id="modal-badge" class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-teal/15 text-teal mb-3"></div>
+      <h3 id="modal-title" class="text-2xl font-bold text-ink mb-3"></h3>
+      <p id="modal-desc" class="text-sm md:text-base text-muted leading-relaxed mb-6"></p>
+
+      <!-- 미디어 영역 (모달 내 영상/게임/이미지 삽입 영역) -->
+      <div id="modal-media" class="rounded-2xl overflow-hidden bg-ivory border border-sage/30 mb-6 flex items-center justify-center"></div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-sage/25">
+        <div id="modal-tools" class="text-xs text-muted font-medium"></div>
+        <div class="flex items-center gap-2">
+          <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-4 py-2 rounded-xl bg-coral hover:bg-coral/90 text-white text-xs font-semibold transition-colors">
+            새 탭에서 게임 실행하기 ↗
+          </a>
+          <button onclick="closeModal()" class="px-4 py-2 rounded-xl bg-teal text-white text-xs font-semibold hover:bg-tealDark transition-colors">
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 모바일 메뉴 토글
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 카드 내 비디오 재생 시 다른 오디오 충돌 방지
+    const cardVideo = document.getElementById('card-video-cpr');
+
+    // 프로젝트 데이터
+    const projectsData = {
+      cpr: {
+        badge: '프로젝트 01 · 응급간호 숏폼 콘텐츠',
+        title: 'CPR(심폐소생술) 교육 숏폼 영상',
+        desc: '혜전대학교 간호학과 실습실을 배경으로 일반인과 학생 모두 10초 안에 심폐소생술의 골든타임 수칙을 익힐 수 있도록 제작한 9:16 세로형 숏폼 영상입니다.',
+        tools: '촬영/편집 · 혜전대학교 간호학과 실습실 · 9:16 숏폼',
+        link: '',
+        mediaHtml: `
+          <div class="w-full p-5 flex flex-col md:flex-row items-center gap-6 bg-slate-900 text-white">
+            <div class="w-48 shrink-0 aspect-[9/16] rounded-2xl overflow-hidden border-2 border-white/20 shadow-xl bg-black">
+              <video id="modal-video-cpr" src="./video_1.mp4" controls autoplay playsinline class="w-full h-full object-cover"></video>
+            </div>
+            <div class="flex-1 text-left space-y-3">
+              <div class="text-xs font-bold text-coral uppercase tracking-wider">영상 주요 장면 구성 (00:10)</div>
+              <ul class="space-y-2.5 text-xs md:text-sm text-slate-200">
+                <li class="p-2.5 rounded-xl bg-white/10">
+                  <span class="font-bold text-sage">00:00~00:01</span> · "눈앞에서 누군가 쓰러진다면?" (의식 확인)
+                </li>
+                <li class="p-2.5 rounded-xl bg-white/10">
+                  <span class="font-bold text-sage">00:02~00:04</span> · "119 신고 및 AED 요청" (도움 요청)
+                </li>
+                <li class="p-2.5 rounded-xl bg-white/10">
+                  <span class="font-bold text-coral">00:05~00:07</span> · "분당 100~120회 | 5cm 깊이" (가슴압박 구호)
+                </li>
+                <li class="p-2.5 rounded-xl bg-white/10">
+                  <span class="font-bold text-ivory">00:08~00:10</span> · "우리의 손길이 생명을 지킵니다." (혜전대 간호학과)
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      tetris: {
+        badge: '프로젝트 02 · Google AI Studio 웹 앱',
+        title: '간호학 힐링 테트리스 게임',
+        desc: '고된 전공 공부와 실습 준비 틈틈이 머리를 식힐 수 있도록 Google AI Studio를 활용해 직접 제작한 웹 테트리스 게임입니다. 아래 버튼을 눌러 즉시 플레이할 수 있습니다.',
+        tools: '제작 도구: Google AI Studio · HTML5 / JavaScript',
+        link: 'https://ai.studio/apps/d56541cf-38ae-4366-80c2-596cbf728f9a',
+        mediaHtml: `
+          <div class="w-full p-6 bg-gradient-to-br from-teal to-tealDark text-white flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center mb-3">
+              <svg class="w-9 h-9 text-ivory" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-lg mb-1">Google AI Studio 배포 앱</h4>
+            <p class="text-xs text-ivory/85 mb-5 max-w-md break-all">
+              https://ai.studio/apps/d56541cf-38ae-4366-80c2-596cbf728f9a
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="https://ai.studio/apps/d56541cf-38ae-4366-80c2-596cbf728f9a"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-2.5 rounded-xl bg-coral hover:bg-coral/90 text-white text-sm font-bold shadow-lg transition-transform active:scale-95"
+              >
+                새 탭에서 바로 플레이하기 ↗
+              </a>
+              <button
+                type="button"
+                onclick="toggleTetrisEmbed()"
+                class="px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-semibold transition-colors"
+              >
+                현재 창에서 미리보기
+              </button>
+            </div>
+            <div id="tetris-embed-wrap" class="hidden w-full mt-5 rounded-xl overflow-hidden border border-white/20 bg-white">
+              <iframe
+                src="https://ai.studio/apps/d56541cf-38ae-4366-80c2-596cbf728f9a"
+                title="테트리스 게임 미리보기"
+                class="w-full h-96 border-0"
+                allow="fullscreen"
+              ></iframe>
+              <div class="bg-ivory text-ink text-[11px] py-2 px-3">
+                ※ 보안 정책(X-Frame-Options)으로 미리보기가 제한될 경우 위 <strong>'새 탭에서 바로 플레이하기'</strong> 버튼을 이용해 주세요.
+              </div>
+            </div>
+          </div>
+        `
+      },
+      poster: {
+        badge: '프로젝트 03 · 보건 교육 시각 디자인',
+        title: '손씻기 & 건강 캠페인 포스터',
+        desc: '병원 감염 예방의 가장 기본인 올바른 손씻기 6단계와 예비 간호사를 위한 임상실습 전 5대 준비 수칙을 한눈에 들어오도록 구성한 캠페인 포스터·카드뉴스 작업물입니다.',
+        tools: '구성 요소: 카드뉴스 5장, 보건 캠페인 인포그래픽 포스터',
+        link: '',
+        mediaHtml: `
+          <div class="p-6 text-center w-full bg-white">
+            <div class="max-w-sm mx-auto rounded-xl border-2 border-sage/40 p-5 bg-ivory">
+              <div class="text-xs font-bold text-coral mb-1">HEALTH CAMPAIGN</div>
+              <div class="text-lg font-bold text-teal mb-3">나와 환자를 지키는 30초의 기적</div>
+              <ul class="text-left text-xs text-ink space-y-2 bg-white p-4 rounded-lg border border-sage/25">
+                <li><strong>1단계:</strong> 손바닥과 손바닥을 마주대고 문지르기</li>
+                <li><strong>2단계:</strong> 손등과 손바닥을 마주대고 문지르기</li>
+                <li><strong>3단계:</strong> 손바닥을 마주대고 손깍지를 끼고 문지르기</li>
+                <li><strong>4단계:</strong> 손가락을 마주잡고 문지르기</li>
+                <li><strong>5단계:</strong> 엄지손가락을 다른 편 손바닥으로 돌려주며 문지르기</li>
+                <li><strong>6단계:</strong> 손가락을 반대편 손바닥에 놓고 문지르며 손톱 밑 깨끗이 하기</li>
+              </ul>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function toggleTetrisEmbed() {
+      const wrap = document.getElementById('tetris-embed-wrap');
+      if (wrap) wrap.classList.toggle('hidden');
+    }
+
+    function openModal(key) {
+      if (cardVideo && !cardVideo.paused) {
+        cardVideo.pause();
+      }
+      const data = projectsData[key];
+      document.getElementById('modal-badge').textContent = data.badge;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-desc').textContent = data.desc;
+      document.getElementById('modal-tools').textContent = data.tools;
+      document.getElementById('modal-media').innerHTML = data.mediaHtml;
+
+      const linkEl = document.getElementById('modal-link');
+      if (data.link) {
+        linkEl.href = data.link;
+        linkEl.classList.remove('hidden');
+      } else {
+        linkEl.classList.add('hidden');
+      }
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modalVideo = document.getElementById('modal-video-cpr');
+      if (modalVideo && !modalVideo.paused) {
+        modalVideo.pause();
+      }
+      document.getElementById('project-modal').classList.add('hidden');
+      document.getElementById('modal-media').innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOnBackdrop(event) {
+      if (event.target.id === 'project-modal') {
+        closeModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
